@@ -5,7 +5,10 @@ use Bramus\Router\Router;
 $router = new Router();
 $router->setNamespace('\App\Controllers');
 
-// page d'accueil
+// Page d'accueil
 $router->get('/', 'Home@index');
 
 $router->get('/home', 'Home@index');
+
+// Lancement du router
+$router->run();

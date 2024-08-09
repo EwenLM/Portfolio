@@ -1,4 +1,4 @@
-<?php
+azeza<?php
 // Démarrer la session, s'il n'est pas déjà démarrée
 if(session_status() === PHP_SESSION_NONE){
     session_start();
@@ -14,14 +14,9 @@ define('RACINE', dirname(__FILE__));
 
 // Charger l'autoloader de Composer pour les dépendances
 require RACINE . '/vendor/autoload.php';
-
-// Charger les variables d'environnement
-// use Dotenv\Dotenv;
-// $dotenv = Dotenv::createImmutable(__DIR__);
-// $dotenv->load();
-
+var_dump(RACINE);
 
 //Charger le fichier de routage
+require RACINE . '/App/Routers/Router.php';
 
-require RACINE . '/App/Root/Route.php';
-
+?>
