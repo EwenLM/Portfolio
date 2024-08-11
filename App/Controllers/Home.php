@@ -9,8 +9,7 @@ class Home
        
         require RACINE . '/App/Views/head.php';
         require RACINE . '/App/Views/homeView.php';
-        require_once RACINE . '/App/Views/foot.php';
+        require RACINE . '/App/Views/foot.php';
     }
-
- 
 }
+?>
