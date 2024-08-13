@@ -133,7 +133,7 @@ hr {
 }
 
 #menu-list {
-    margin-top: 10px;
+    margin-top: 1px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
@@ -141,17 +141,42 @@ hr {
 }
 
 
-.link1 .text:hover {
+#menu-list .link .text:hover {
     color: $hoverColor;
 }
-.link2 .text:hover {
-    color: $titleColor;
+
+.li-menu{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
 }
 
 .text {
     @include Text();
 }
 
+a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.a::before:hover {
+    border-right-color: $lineColor; /* Couleur du triangle */
+    opacity: 1;
+    transform: translateY(-50%) translateX(-5px);
+}
 
 
 // =================================Mediaqueries=============================================
@@ -174,6 +199,32 @@ hr {
 
     .li-menu {
         height: 150px;
+    }
+
+    a::after {
+        content: "";
+        position: absolute;
+        right: 600px; /* Ajuste la position à droite du lien */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+
+    a:hover::after {
+        border-top-color: $lineColor; /* Change la couleur du triangle */
+        opacity: 1;
+        transform: translateY(-50%) translateX(5px); /* Légère animation de translation */
+    }
+
+    .li-menu:hover {
+        border-bottom: 1.5mm ridge $lineColor;
     }
     
 }

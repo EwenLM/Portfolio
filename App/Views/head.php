@@ -14,22 +14,22 @@
         <header>
             <h1 id="title">Ewen Le Maux</h1>
             <h2 id="subtitle">Développeur FullStack</h2>
-
-            <div id="hrcontainer">
-                <hr id="hr1" class="hr">
-                <hr id="hr2" class="hr">
-                <hr id="hr3" class="hr">
-            </div>
+    <!-- 
+                <div id="hrcontainer">
+                    <hr id="hr1" class="hr">
+                    <hr id="hr2" class="hr">
+                    <hr id="hr3" class="hr">
+                </div> -->
             <div id="scrollable-content">
                 <nav id="nav">
                     <ul id="menu-list">
-                        <a class="link1" href="">
-                            <li class="text li-menu">A Propos</li>
+                        <a class="link li-menu triangle" href="">
+                            <li class="text ">A Propos</li>
                         </a>
-                        <a class="link2 li-menu" href="">
-                            <li class="text">Mes Projets</li>
+                        <a class="link li-menu triangle" href="">
+                            <li class="text">Projets</li>
                         </a>
-                        <a class="link1 li-menu" href="">
+                        <a class="link li-menu triangle" href="">
                             <li class="text">Contact</li>
                         </a>
                     </ul>
