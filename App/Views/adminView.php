@@ -1,11 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ewen Le Maux - Portfolio</title>
+    <link rel="stylesheet" href="./Asset/Css/main.css">
+    <script src="./Asset/Scripts/scroll.js"></script>
+</head>
+
+<body>
+    
+    <div id="border">
+        <header>
+        <h1 class="subtitle admin-title">Admin</h1>
+        </header>
 <body>
     <nav>
         <a href="./" class="text">Retour au site</a>
     </nav>
-    <h2 class="subtitle admin-title">Admin</h2>
-    </header>
     <main data-scroll="area">
-        <div class="scrollable-content ">
+        <div class="scroll-container">
 
         <div class="content-section">
             <h3 class="subtitle2">Chargement CV</h3>
