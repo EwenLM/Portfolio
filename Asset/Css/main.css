@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "pixel_operatorregular";
   src: url("../Fonts/pixelOperator/pixeloperator-webfont.woff2") format("woff2"), url("../Fonts/pixelOperator/pixeloperator-webfont.woff") format("woff");
@@ -15,6 +16,12 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+main {
+  height: 100%;
+  width: 100ù;
+  overflow: hidden;
 }
 
 a {
@@ -38,10 +45,15 @@ ul li {
   overflow: hidden;
 }
 
-#scrollable-content {
-  transform: translate3d(0px, 0px, 0px);
+.scrollable-content {
+  min-height: 100%;
   transition: transform 0.3s ease-out;
   padding-right: 20px;
+}
+
+.content-section {
+  height: 2000px; /* Assurez-vous que le contenu dépasse la hauteur de l'écran */
+  background: linear-gradient(to bottom, #e66465, #9198e5);
 }
 
 header {
@@ -55,10 +67,15 @@ header {
   margin-bottom: 5px;
 }
 
-#subtitle {
+.subtitle {
   color: #45ED65;
-  font-family: "press_start_2pregular";
+  font-family: "pixel_operatorregular";
   margin-top: 0;
+}
+
+.subtitle2 {
+  color: #45ED65;
+  font-family: "pixel_operatorregular";
 }
 
 #hrcontainer {
@@ -139,12 +156,106 @@ a::before {
   transform: translateY(-50%) translateX(-5px);
 }
 
+form {
+  background-color: #8345ED;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  background-color: #8345ED;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-family: "press_start_2pregular";
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #45ED65;
+}
+
+label.text {
+  color: white;
+  font-family: "pixel_operatorregular";
+  display: block;
+  margin-bottom: 8px;
+}
+
+input.text {
+  font-family: "pixel_operatorregular";
+  font-size: 1rem;
+  width: calc(100% - 24px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #8345ED;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  transition: border-color 0.3s ease;
+}
+
+input.text:hover, input.text:focus {
+  border-color: #45ED65;
+  outline: none;
+}
+
+input[type=file] {
+  font-family: "pixel_operatorregular";
+  font-size: 1rem;
+  width: calc(100% - 24px);
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 2px solid #8345ED;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+input[type=file]:hover {
+  border-color: #45ED65;
+}
+
+.admin-title {
+  padding-top: 10px;
+}
+
+#title-project {
+  color: black;
+  font-family: "pixel_operatorregular";
+  font-size: 1rem;
+}
+
+#cv.text {
+  font-family: "pixel_operatorregular";
+  font-size: 1rem;
+}
+
+#description {
+  color: black;
+  font-family: "pixel_operatorregular";
+  font-size: 1rem;
+}
+
+#image {
+  font-family: "pixel_operatorregular";
+  font-size: 1rem;
+}
+
 @media screen and (min-width: 1200px) {
   #title {
     font-size: 3rem;
     margin-bottom: 5px;
   }
-  #subtitle {
+  .subtitle {
     font-size: 2rem;
     margin-top: 0;
   }
