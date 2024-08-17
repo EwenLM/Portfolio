@@ -12,7 +12,7 @@
 <body>
     <div id="border">
         <header>
-            <h1 id="title">Ewen Le Maux</h1>
+            <a href="./home"><h1 id="title">Ewen Le Maux</h1></a>
             <h2 id="subtitle">Développeur FullStack</h2>
     <!-- 
                 <div id="hrcontainer">
@@ -21,17 +21,4 @@
                     <hr id="hr3" class="hr">
                 </div> -->
             <div id="scrollable-content">
-                <nav id="nav">
-                    <ul id="menu-list">
-                        <a class="link li-menu triangle" href="">
-                            <li class="text ">A Propos</li>
-                        </a>
-                        <a class="link li-menu triangle" href="">
-                            <li class="text">Projets</li>
-                        </a>
-                        <a class="link li-menu triangle" href="">
-                            <li class="text">Contact</li>
-                        </a>
-                    </ul>
-                </nav>
-        </header>
+    

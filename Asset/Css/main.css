@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "pixel_operatorregular";
   src: url("../Fonts/pixelOperator/pixeloperator-webfont.woff2") format("woff2"), url("../Fonts/pixelOperator/pixeloperator-webfont.woff") format("woff");
@@ -20,6 +19,7 @@ body {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 ul li {
@@ -153,26 +153,6 @@ a::before {
   }
   .li-menu {
     height: 150px;
-  }
-  a::after {
-    content: "";
-    position: absolute;
-    right: 600px; /* Ajuste la position à droite du lien */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    transition: all 0.3s ease;
-    opacity: 0;
-  }
-  a:hover::after {
-    border-top-color: #8345ED; /* Change la couleur du triangle */
-    opacity: 1;
-    transform: translateY(-50%) translateX(5px); /* Légère animation de translation */
   }
   .li-menu:hover {
     border-bottom: 1.5mm ridge #8345ED;

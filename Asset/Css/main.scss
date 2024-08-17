@@ -58,6 +58,7 @@ body {
 
 a {
     text-decoration: none;
+    color: $textColor;
 }
 
 ul li {
@@ -199,28 +200,6 @@ a::before {
 
     .li-menu {
         height: 150px;
-    }
-
-    a::after {
-        content: "";
-        position: absolute;
-        right: 600px; /* Ajuste la position à droite du lien */
-        top: 50%;
-        transform: translateY(-50%);
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        transition: all 0.3s ease;
-        opacity: 0;
-    }
-
-    a:hover::after {
-        border-top-color: $lineColor; /* Change la couleur du triangle */
-        opacity: 1;
-        transform: translateY(-50%) translateX(5px); /* Légère animation de translation */
     }
 
     .li-menu:hover {
