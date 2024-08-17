@@ -19,6 +19,7 @@ body {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 ul li {
@@ -101,17 +102,41 @@ hr {
   align-items: end;
 }
 
-.link1 .text:hover {
+#menu-list .link .text:hover {
   color: #45ED65;
 }
 
-.link2 .text:hover {
-  color: #DE45ED;
+.li-menu {
+  width: 100%;
+  display: flex;
+  justify-content: end;
 }
 
 .text {
   color: white;
   font-family: "pixel_operatorregular";
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.a::before:hover {
+  border-right-color: #8345ED; /* Couleur du triangle */
+  opacity: 1;
+  transform: translateY(-50%) translateX(-5px);
 }
 
 @media screen and (min-width: 1200px) {
@@ -128,5 +153,8 @@ hr {
   }
   .li-menu {
     height: 150px;
+  }
+  .li-menu:hover {
+    border-bottom: 1.5mm ridge #8345ED;
   }
 }
