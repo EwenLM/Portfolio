@@ -18,10 +18,11 @@ class Project
     public function uploadProject()
     {
         $msgProject = null;
-        if (isset($_POST['title'], $_POST['description'], $_POST['link'], $_FILES['image'], $_FILES['video'])) {
+        if (isset($_POST['title'], $_POST['description'], $_POST['link'], $_POST['github'], $_FILES['image'], $_FILES['video'])) {
             $title = htmlspecialchars($_POST['title']);
             $description =  htmlspecialchars($_POST['description']);
             $link = $_POST['link'];
+            $github = $_POST['github'];
 
             $images = $_FILES['image'];
             $imageNames = [];
@@ -47,7 +48,7 @@ class Project
             } else {
                 move_uploaded_file($tmpNameImage, './Upload/Images/'.$nameImage);
                 move_uploaded_file($tmpNameVideo, './Upload/Videos/'.$nameVideo);
-                $newProject = new ProjectModel($title, $description, $link, $nameImageString, $nameVideo);
+                $newProject = new ProjectModel($title, $description, $link, $github, $nameImageString, $nameVideo);
                 $newProject->create($newProject);
                 $msgProject = "Projet ajouté !";
             }

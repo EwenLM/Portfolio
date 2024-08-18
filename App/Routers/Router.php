@@ -15,7 +15,13 @@ $router->get("/","Home@index");
 //Page A propos
 $router ->get("/about","About@index");
 
-//Page Admin
+
+//Page Projects
+$router ->get("/projects", "Projects@index");
+
+
+
+//=================Page Admin====================
 $router ->get('/admin','Admin@index');
 
 //Gestion du cv

@@ -15,8 +15,8 @@
             
         <a href="./home"><h1 id="title">Ewen Le Maux</h1></a>
           <h2 class="subtitle">Développeur FullStack</h2>
-    <!-- 
-                <div id="hrcontainer">
+    
+                <!-- <div id="hrcontainer">
                     <hr id="hr1" class="hr">
                     <hr id="hr2" class="hr">
                     <hr id="hr3" class="hr">

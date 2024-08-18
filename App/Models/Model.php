@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use PDOException;
+use PDO;
 
 class Model
 {
@@ -40,7 +41,7 @@ class Model
                 $query->execute($attributes);
                 return $query;
             } else {
-                return $this->db->prepare($sql);
+                return $this->db->query($sql);
             }
         } catch (PDOException $e) {
             throw new \Exception("Erreur de requête: " . $e->getMessage());
@@ -55,8 +56,8 @@ class Model
      */
     public function findAll()
     {
-        $query = $this->query('SELECT * FROM ' . $this->table);
-        return $query->fetchAll();
+        return $this->query("SELECT * FROM " . $this->table)->fetchAll(PDO::FETCH_ASSOC);
+        
     }
 
 

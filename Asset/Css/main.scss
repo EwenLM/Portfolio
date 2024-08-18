@@ -177,7 +177,7 @@ hr {
 
 }
 
-h3 {
+.subtitle-admin {
     @include Subtitle2();
     border-bottom:solid 1px #8345ED ;
 }
@@ -234,6 +234,19 @@ input.text {
     transition: border-color 0.3s ease;
 }
 
+textarea.text {
+    @include FormLabelInput();
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid $lineColor;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    transition: border-color 0.3s ease;
+}
+
+
 input.text:hover, input.text:focus {
     border-color: $hoverColor;
     outline: none;
@@ -259,10 +272,10 @@ input[type="file"]:hover {
     padding-top: 10px;
 }
 
-#title-project {
-    color: black;
+.title-project {
+    color: $subtitleColor;
     font-family: 'pixel_operatorregular';
-    font-size: 1rem;
+    font-size: 3rem;
 }
 
 #cv.text{

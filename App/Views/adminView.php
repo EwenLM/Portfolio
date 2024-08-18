@@ -25,7 +25,7 @@
                     <div class="content-section">
 
                         <!-- ====================Formulaire ajout de cv================= -->
-                        <h3 class="subtitle2">Chargement CV</h3>
+                        <h3 class="subtitle-admin">Chargement CV</h3>
                         <?php if (isset($_SESSION["msgCv"])) {
                             $message = $_SESSION["msgCv"];
                         ?>
@@ -42,7 +42,7 @@
 
                         <!-- ====================Formualire ajout de projet================ -->
 
-                        <h3 class="subtitle2">Ajout Projet</h3>
+                        <h3 class="subtitle-admin">Ajout Projet</h3>
                         <?php if (isset($_SESSION["msgProject"])) {
                             $message = $_SESSION["msgProject"];
                         ?>
@@ -55,10 +55,13 @@
                             <input class="text" type="text" id="title-project" name="title">
 
                             <label class="text" for="description">Description</label>
-                            <input class="text" type="text" id="description" name="description">
+                            <textarea rows="7" class="text" type="text" id="description" name="description"></textarea>
 
                             <label class="text" for="link">Lien</label>
                             <input class="text" type="text" id="link" name="link">
+
+                            <label class="text" for="github">Github</label>
+                            <input class="text" type="text" id="github" name="github">
 
                             <label class="text" for="image">Image du site</label>
                             <input class="text" type="file" multiple
