@@ -4,7 +4,7 @@ namespace App\Models;
 
 use PDOException;
 
-class DbConnector extends Db
+class DbConnect extends Db
 {
     private static $instance;
 
@@ -24,7 +24,7 @@ class DbConnector extends Db
 
 // Utilisation la classe MyDb pour obtenir une instance de PDO
 try {
-    $db = DbConnector::getInstance()->getPdo();
+    $db = DbConnect::getInstance()->getPdo();
     // Utilisation de $db pour effectuer des opérations sur la base de données
 } catch (PDOException $e) {
     echo "Erreur de connexion à la base de données: " . $e->getMessage();

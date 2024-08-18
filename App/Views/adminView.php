@@ -10,45 +10,64 @@
 </head>
 
 <body>
-    
+
     <div id="border">
         <header>
-        <h1 class="subtitle admin-title">Admin</h1>
+            <h1 class="subtitle admin-title">Admin</h1>
         </header>
-<body>
-    <nav>
-        <a href="./" class="text">Retour au site</a>
-    </nav>
-    <main data-scroll="area">
-        <div class="scroll-container">
 
-        <div class="content-section">
-            <h3 class="subtitle2">Chargement CV</h3>
-            <form action="./cv/upload">
-                <label class="text" for="cv">Choisir un CV</label>
-                <input class="text" type="file" id="cv" name="cv" accept=".pdf, .doc">
-                <button type="submit">Uploader CV</button>
-            </form>
+        <body>
+            <nav>
+                <a href="./" class="text">Retour au site</a>
+            </nav>
+            <main data-scroll="area">
+                <div class="scroll-container">
+                    <div class="content-section">
 
-            <h3 class="subtitle2">Ajout Projets</h3>
-            <form action="./project/upload">
-                <label class="text" for="title-project">Titre du projet</label>
-                <input class="text" type="text" id="title-project" name="title-project">
+                        <!-- ====================Formulaire ajout de cv================= -->
+                        <h3 class="subtitle2">Chargement CV</h3>
+                        <?php if (isset($_SESSION["msgCv"])) {
+                            $message = $_SESSION["msgCv"];
+                        ?>
+                            <p class="text"><?php echo $message ?></p>
+                        <?php
+                            unset($_SESSION['msgCv']);
+                        } ?>
 
-                <label class="text" for="description">Description</label>
-                <input class="text" type="text" id="description" name="description">
+                        <form action="./admin/cv/upload" method="POST">
+                            <label class="text" for="cv">Choisir un CV</label>
+                            <input class="text" type="file" id="cv" name="cv" accept=".pdf, .doc">
+                            <button type="submit">Uploader CV</button>
+                        </form>
 
-                <label class="text" for="image">Image du site</label>
-                <input class="text" type="file" accept="image/png, image/webp, image/jpg, image/jpeg" id="image" name="image">
+                        <!-- ====================Formualire ajout de projet================ -->
 
-                <label class="text" for="image">Vidéo du site</label>
-                <input class="text" type="file" accept=".mp4" id="image" name="image">
+                        <h3 class="subtitle2">Ajout Projet</h3>
+                        <?php if (isset($_SESSION["msgProject"])) {
+                            $message = $_SESSION["msgProject"];
+                        ?>
+                            <p class="text"><?php echo $message ?></p>
+                        <?php
+                            unset($_SESSION['msgProject']);
+                        } ?>
+                        <form action="./admin/project/upload" method="POST" enctype="multipart/form-data">
+                            <label class="text" for="title-project">Titre du projet</label>
+                            <input class="text" type="text" id="title-project" name="title">
 
-                <button type="submit">Ajouter Projet</button>
-            </form>
+                            <label class="text" for="description">Description</label>
+                            <input class="text" type="text" id="description" name="description">
+
+                            <label class="text" for="image">Image du site</label>
+                            <input class="text" type="file" accept="image/png, image/webp, image/jpg, image/jpeg" id="image" name="image">
+
+                            <label class="text" for="video">Vidéo du site</label>
+                            <input class="text" type="file" accept=".mp4" id="video" name="video">
+
+                            <button type="submit">Ajouter Projet</button>
+                        </form>
 
 
-    </main>
-</body>
+            </main>
+        </body>
 
 </html>

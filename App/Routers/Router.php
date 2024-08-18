@@ -18,9 +18,13 @@ $router ->get("/about","About@index");
 //Page Admin
 $router ->get('/admin','Admin@index');
 
-//gestion du cv
-$router ->get('/admin/cv/upload', 'Admin@upload');
-$router ->get('admin/cv/delete' ,'Admin@deleteCv');
+//Gestion du cv
+$router ->get('/admin/cv/upload', 'Admin@uploadCv');
+$router ->post('admin/cv/delete' ,'Admin@deleteCv');
+
+//Gestion des projets
+$router ->post('/admin/project/upload', 'Project@uploadProject');
+
 // Lancement du router
 $router->run();
 

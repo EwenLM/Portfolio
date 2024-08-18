@@ -194,7 +194,6 @@ h3 {
 form {
     background-color: $backgroundColor;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     max-width: 100%;
     box-sizing: border-box;
@@ -204,7 +203,7 @@ form button {
     background-color: $lineColor;
     color: white;
     padding: 10px 15px;
-    border: solid 1px $titleColor;
+    border: none;
     font-family: $titleFont;
     font-size: 1rem;
     cursor: pointer;
