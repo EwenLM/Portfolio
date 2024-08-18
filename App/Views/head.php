@@ -12,9 +12,11 @@
 <body>
     <div id="border">
         <header>
-            
+
+        <div id="bigTitle">
         <a href="./home"><h1 id="title">Ewen Le Maux</h1></a>
           <h2 class="subtitle">Développeur FullStack</h2>
+        </div>
     
                 <!-- <div id="hrcontainer">
                     <hr id="hr1" class="hr">

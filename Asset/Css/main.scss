@@ -63,7 +63,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    
+
 }
 
 main {
@@ -95,21 +95,16 @@ ul li {
     flex-direction: column;
 }
 
-.scroll-container {
-    flex-grow: 1; //rempli tout l'espace disponible
-    height: 100%;
-    overflow: auto; 
-    box-sizing: border-box;
-    scrollbar-width: none; // Pour Firefox 
-}
-
-#scroll-container::-webkit-scrollbar {
-    display: none; // Pour les autres navigateurs
-}
 
 header {
     display: flex;
     flex-direction: column;
+}
+
+#bigTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #title {
@@ -122,18 +117,6 @@ header {
     margin-top: 0;
 }
 
-#hrcontainer {
-    display: flex;
-    flex-direction: column;
-}
-
-hr {
-    width: 65%;
-
-    color: $lineColor;
-    background-color: $lineColor;
-    margin: 20px 0;
-}
 
 #hr1 {
     display: flex;
@@ -150,36 +133,68 @@ hr {
     align-self: end;
 }
 
-#nav {
-    font-weight: 900;
-    display: flex;
-    justify-content: end;
+.scroll-container {
+    flex-grow: 1; //rempli tout l'espace disponible
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    scrollbar-width: none; // Pour Firefox 
+}
 
+#scroll-container::-webkit-scrollbar {
+    display: none; // Pour les autres navigateurs
+}
+
+div.project {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.title-project{
+    width: 60%;
+    font-size: 2rem;
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 4rem;
+    height: 70vh;
 }
 
 #menu-list {
-    margin-top: 50px;
-    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
-
 
 #menu-list .link .text:hover {
     color: $hoverColor;
 }
 
-.li-menu{
+.li-menu {
     width: 100%;
+    /* Chaque élément prend toute la largeur disponible */
     display: flex;
-    justify-content: end;
-
+    justify-content: center;
+    /* Centre le lien horizontalement */
 }
 
-.subtitle-admin {
-    @include Subtitle2();
-    border-bottom:solid 1px #8345ED ;
+.link {
+    display: flex;
+    align-items: center;
+    /* Centre verticalement le texte */
+    justify-content: center;
+    /* Centre horizontalement le texte */
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    /* Le lien prend toute la largeur de son parent */
 }
 
 .text {
@@ -187,9 +202,12 @@ hr {
 }
 
 
-
-
 //==================Admin=================
+
+.subtitle-admin {
+    @include Subtitle2();
+    border-bottom: solid 1px #8345ED;
+}
 
 form {
     background-color: $backgroundColor;
@@ -247,7 +265,8 @@ textarea.text {
 }
 
 
-input.text:hover, input.text:focus {
+input.text:hover,
+input.text:focus {
     border-color: $hoverColor;
     outline: none;
 }
@@ -276,9 +295,10 @@ input[type="file"]:hover {
     color: $subtitleColor;
     font-family: 'pixel_operatorregular';
     font-size: 3rem;
+    margin: 4px 0 4px 0;
 }
 
-#cv.text{
+#cv.text {
     @include FormLabelInput();
 }
 
@@ -291,7 +311,33 @@ input[type="file"]:hover {
     @include FormLabelInput();
 }
 
-// =================================Mediaqueries=============================================
+// ==================================Mediaqueries=============================================
+
+@media screen and (min-width:740px) {
+
+    #bigTitle {
+        align-items: start;
+    }
+
+    .li-menu {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    #nav {
+        justify-content: end;
+    }
+
+    #menu-list {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+}
 
 @media screen and (min-width:1200px) {
 
@@ -306,15 +352,25 @@ input[type="file"]:hover {
     }
 
     #nav {
-        font-size: 10rem;
+        font-size: 6rem;
     }
 
     .li-menu {
-        height: 150px;
+        height: 100px;
     }
 
     .li-menu:hover {
         border-bottom: 1.5mm ridge $lineColor;
     }
-    
+
+}
+
+@media screen and (min-width:1400px) {
+    #nav {
+        font-size: 10rem;
+    }
+
+    .li-menu {
+        height: 200px;
+    }
 }

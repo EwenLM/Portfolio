@@ -40,7 +40,7 @@
                             <button type="submit">Uploader CV</button>
                         </form>
 
-                        <!-- ====================Formualire ajout de projet================ -->
+                        <!-- ====================Formulaire ajout de projet================ -->
 
                         <h3 class="subtitle-admin">Ajout Projet</h3>
                         <?php if (isset($_SESSION["msgProject"])) {
