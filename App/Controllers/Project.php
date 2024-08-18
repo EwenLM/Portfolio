@@ -18,13 +18,24 @@ class Project
     public function uploadProject()
     {
         $msgProject = null;
-        if (isset($_POST['title'], $_POST['description'], $_FILES['image'], $_FILES['video'])) {
+        if (isset($_POST['title'], $_POST['description'], $_POST['link'], $_FILES['image'], $_FILES['video'])) {
             $title = htmlspecialchars($_POST['title']);
             $description =  htmlspecialchars($_POST['description']);
+            $link = $_POST['link'];
+
+            $images = $_FILES['image'];
+            $imageNames = [];
             
-            $image = $_FILES['image'];
-            $tmpNameImage = $image['tmp_name'];
-            $nameImage = $image['name'];
+            //Parcour toutes les images pour saisir leur nom
+            foreach ($images['tmp_name'] as $index => $tmpNameImage) {
+                $nameImage = $images['name'][$index];
+                
+                if (move_uploaded_file($tmpNameImage, './Upload/Images/' . $nameImage)) {
+                    $imageNames[] = $nameImage;
+                }
+            }
+            //Séparé les noms d'images par une virgule
+            $nameImageString = implode(',', $imageNames);
 
             $video = $_FILES['video'];
             $tmpNameVideo = $video['tmp_name'];
@@ -36,14 +47,12 @@ class Project
             } else {
                 move_uploaded_file($tmpNameImage, './Upload/Images/'.$nameImage);
                 move_uploaded_file($tmpNameVideo, './Upload/Videos/'.$nameVideo);
-                $newProject = new ProjectModel($title, $description, $nameImage, $nameVideo);
+                $newProject = new ProjectModel($title, $description, $link, $nameImageString, $nameVideo);
                 $newProject->create($newProject);
                 $msgProject = "Projet ajouté !";
             }
             header("location:" . $_SERVER['HTTP_REFERER']);
             $_SESSION['msgProject'] = $msgProject;
-        } else {
-            echo 'probleme';
         }
     }
 }

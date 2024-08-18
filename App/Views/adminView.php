@@ -57,8 +57,12 @@
                             <label class="text" for="description">Description</label>
                             <input class="text" type="text" id="description" name="description">
 
+                            <label class="text" for="link">Lien</label>
+                            <input class="text" type="text" id="link" name="link">
+
                             <label class="text" for="image">Image du site</label>
-                            <input class="text" type="file" accept="image/png, image/webp, image/jpg, image/jpeg" id="image" name="image">
+                            <input class="text" type="file" multiple
+                            accept="image/png, image/webp, image/jpg, image/jpeg" id="image" name="image[]">
 
                             <label class="text" for="video">Vidéo du site</label>
                             <input class="text" type="file" accept=".mp4" id="video" name="video">
