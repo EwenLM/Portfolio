@@ -51,11 +51,15 @@
                             unset($_SESSION['msgProject']);
                         } ?>
                         <form action="./admin/project/upload" method="POST" enctype="multipart/form-data">
+
                             <label class="text" for="title-project">Titre du projet</label>
                             <input class="text" type="text" id="title-project" name="title">
 
                             <label class="text" for="description">Description</label>
                             <textarea rows="7" class="text" type="text" id="description" name="description"></textarea>
+
+                            <label class="text" for="date">Date (mois/année)</label>
+                            <input class="text" type="date" id="date" name="date">
 
                             <label class="text" for="link">Lien</label>
                             <input class="text" type="text" id="link" name="link">

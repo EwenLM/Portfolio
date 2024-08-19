@@ -9,9 +9,11 @@
                     <?php foreach ($dataProjects['titles'] as $index => $title): ?>
                         <div class="project">
                             <h3 class="title-project"><?php echo htmlspecialchars($title); ?></h3>
-                            <p class="text"><?php echo htmlspecialchars($dataProjects['descriptions'][$index]); ?></p>
-                            <p class="text"><a href="<?= $dataProjects['links'][$index]; ?>" target="_blank">Site</a></p>
-                            <p class="text"><a href="<?= $dataProjects['githubs'][$index]; ?>" target="_blank">GitHub</a></p>
+                            <div class="project-detail">
+                                <p class="text"><?php echo htmlspecialchars($dataProjects['descriptions'][$index]); ?></p>
+                                <p class="text"><a href="<?= $dataProjects['links'][$index]; ?>" target="_blank">Site</a></p>
+                                <p class="text"><a href="<?= $dataProjects['githubs'][$index]; ?>" target="_blank">GitHub</a></p>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                 <?php else: ?>

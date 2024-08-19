@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ewen Le Maux - Portfolio</title>
     <link rel="stylesheet" href="./Asset/Css/main.css">
-    <script src="./Asset/Scripts/scroll.js"></script>
+    <script src="./Asset/Scripts/scroll.js" defer></script>
+    <script src="./Asset/Scripts/accordion.js" defer></script>
 </head>
 
 <body>

@@ -68,8 +68,9 @@ body {
 
 main {
     height: 100%;
-    width: 100ù;
+    width: 100%;
     overflow: hidden;
+    display: flex;
 }
 
 a {
@@ -145,16 +146,6 @@ header {
     display: none; // Pour les autres navigateurs
 }
 
-div.project {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.title-project{
-    width: 60%;
-    font-size: 2rem;
-}
 
 #nav {
     display: flex;
@@ -185,6 +176,10 @@ div.project {
     /* Centre le lien horizontalement */
 }
 
+.li-menu:hover {
+    border-bottom: 1.5mm ridge $lineColor;
+}
+
 .link {
     display: flex;
     align-items: center;
@@ -199,6 +194,41 @@ div.project {
 
 .text {
     @include Text();
+}
+
+//===========Projets============
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.title-project {
+    color: $subtitleColor;
+    font-family: 'pixel_operatorregular';
+    font-size: 3rem;
+    margin: 4px 0;
+    cursor: pointer;
+}
+
+.title-project:hover {
+    border-bottom: 1.5mm ridge $lineColor;
+}
+
+.title-project.active {
+    border-bottom: 1.5mm ridge $lineColor;
+}
+
+.project-detail {
+    display: none;
+}
+
+.project-detail.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
 }
 
 
@@ -291,13 +321,6 @@ input[type="file"]:hover {
     padding-top: 10px;
 }
 
-.title-project {
-    color: $subtitleColor;
-    font-family: 'pixel_operatorregular';
-    font-size: 3rem;
-    margin: 4px 0 4px 0;
-}
-
 #cv.text {
     @include FormLabelInput();
 }
@@ -341,6 +364,8 @@ input[type="file"]:hover {
 
 @media screen and (min-width:1200px) {
 
+    //========Home==========
+
     #title {
         font-size: 3rem;
         margin-bottom: 5px
@@ -359,8 +384,9 @@ input[type="file"]:hover {
         height: 100px;
     }
 
-    .li-menu:hover {
-        border-bottom: 1.5mm ridge $lineColor;
+    //========Projects===========
+    .title-project {
+        font-size: 6rem;
     }
 
 }
@@ -372,5 +398,10 @@ input[type="file"]:hover {
 
     .li-menu {
         height: 200px;
+    }
+
+     //========Projects===========
+     .title-project {
+        font-size: 8rem;
     }
 }

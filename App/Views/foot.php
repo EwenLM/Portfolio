@@ -1,10 +1,11 @@
-</div>
-</div>
-</div>
 <footer>
-
-
+    <div class="scroll">
+    <p class="text scroll">scroll</p>
+    </div>
 </footer>
+</div>
+</div>
+</div>
 
 
 </html>

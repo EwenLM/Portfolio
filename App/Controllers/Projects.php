@@ -7,17 +7,19 @@ class Projects
     public function index()
     {
         $projectModel = new ProjectModel();
-        $projects = $projectModel->findAll();
+        $projects = $projectModel->findAllOrderedByDate();
         // Assurez-vous que les données sont présentes
         if (!empty($projects)) {
             $titles = [];
             $descriptions = [];
+            $date = [];
             $links = [];
             $githubs = [];
             
             foreach ($projects as $project) {
                 $titles[] = $project['title'];
                 $descriptions[] = $project['description'];
+                $date[] = $project['dateD'];
                 $links[] = $project['link'];
                 $githubs[] = $project['github'];
             }
@@ -25,6 +27,7 @@ class Projects
             $dataProjects = [
                 'titles' => $titles,
                 'descriptions' => $descriptions,
+                'date' => $date,
                 'links' => $links,
                 'githubs' => $githubs
             ];

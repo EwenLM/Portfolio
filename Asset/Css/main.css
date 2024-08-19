@@ -20,8 +20,9 @@ body {
 
 main {
   height: 100%;
-  width: 100ù;
+  width: 100%;
   overflow: hidden;
+  display: flex;
 }
 
 a {
@@ -97,17 +98,6 @@ header {
   display: none;
 }
 
-div.project {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.title-project {
-  width: 60%;
-  font-size: 2rem;
-}
-
 #nav {
   display: flex;
   justify-content: center;
@@ -137,6 +127,10 @@ div.project {
   /* Centre le lien horizontalement */
 }
 
+.li-menu:hover {
+  border-bottom: 1.5mm ridge #8345ED;
+}
+
 .link {
   display: flex;
   align-items: center;
@@ -152,6 +146,39 @@ div.project {
 .text {
   color: white;
   font-family: "pixel_operatorregular";
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.title-project {
+  color: #45ED65;
+  font-family: "pixel_operatorregular";
+  font-size: 3rem;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.title-project:hover {
+  border-bottom: 1.5mm ridge #8345ED;
+}
+
+.title-project.active {
+  border-bottom: 1.5mm ridge #8345ED;
+}
+
+.project-detail {
+  display: none;
+}
+
+.project-detail.active {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 10px;
 }
 
 .subtitle-admin {
@@ -245,13 +272,6 @@ input[type=file]:hover {
   padding-top: 10px;
 }
 
-.title-project {
-  color: #45ED65;
-  font-family: "pixel_operatorregular";
-  font-size: 3rem;
-  margin: 4px 0 4px 0;
-}
-
 #cv.text {
   font-family: "pixel_operatorregular";
   font-size: 1rem;
@@ -303,8 +323,8 @@ input[type=file]:hover {
   .li-menu {
     height: 100px;
   }
-  .li-menu:hover {
-    border-bottom: 1.5mm ridge #8345ED;
+  .title-project {
+    font-size: 6rem;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -313,5 +333,8 @@ input[type=file]:hover {
   }
   .li-menu {
     height: 200px;
+  }
+  .title-project {
+    font-size: 8rem;
   }
 }
