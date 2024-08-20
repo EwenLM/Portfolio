@@ -12,10 +12,10 @@ abstract class Db
     protected function __construct()
     {
         // Récupération des valeurs à partir des variables d'environnement
-        $dbhost = $_ENV['DBHOST'] ?? 'localhost';
-        $dbuser = $_ENV['DBUSER'] ?? 'root';
+        $dbhost = $_ENV['DBHOST']?? 'localhost';
+        $dbuser = $_ENV['DBUSER']?? 'root';
         $dbpass = $_ENV['DBPASS'] ?? '';
-        $dbname = $_ENV['DBNAME'] ?? 'pf';
+        $dbname = $_ENV['DBNAME']?? 'pf';
     
         // DSN de connexion
         $dsn = 'mysql:dbname=' . $dbname . ';host=' . $dbhost;
