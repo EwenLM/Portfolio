@@ -71,6 +71,7 @@ main {
     width: 100%;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -115,7 +116,7 @@ header {
 
 .subtitle {
     @include Subtitle();
-    margin-top: 0;
+    margin: 0;
 }
 
 
@@ -145,7 +146,6 @@ header {
 #scroll-container::-webkit-scrollbar {
     display: none; // Pour les autres navigateurs
 }
-
 
 #nav {
     display: flex;
@@ -193,11 +193,22 @@ header {
 }
 
 #miniNav {
+
     justify-content: center;
     padding-left: 0;
+    padding-bottom: 10px;
     margin-top: 20px;
-    display: flex; 
-    gap: 20px; 
+    display: flex;
+    gap: 20px;
+    border-bottom: solid 2px $lineColor;
+}
+
+#miniNav p {
+    font-size: 1.3rem;
+}
+
+#miniNav p:hover{
+    border-left: solid 2px $lineColor;
 }
 
 .text {
@@ -210,13 +221,13 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .project {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; 
+    align-items: flex-end;
     max-width: 70%;
     text-align: right;
     margin-bottom: 15px;
@@ -257,11 +268,11 @@ header {
     flex-direction: row;
 }
 
-.link-project{
+.link-project {
     display: flex;
 }
 
-.img-link{
+.img-link {
     color: #45ED65;
     width: 30px;
     height: 30px;
@@ -375,8 +386,11 @@ input[type="file"]:hover {
 
 @media screen and (min-width:740px) {
 
+    //======Home==========
     #bigTitle {
+        padding-bottom: 10px;
         align-items: start;
+        border-bottom: solid 2px $lineColor;
     }
 
     .li-menu {
@@ -395,6 +409,29 @@ input[type="file"]:hover {
         display: flex;
         flex-direction: column;
         align-items: end;
+    }
+
+    //======Project=======
+
+    #navSide {
+        width: 10%;
+    }
+
+    #miniNav {
+        border-bottom: none;
+        /* Alignement vertical des éléments */
+        align-items: flex-start;
+        /* Aligner les éléments à gauche */
+        writing-mode: vertical-rl;
+        /* Orientation verticale des lettres */
+
+        /* Garder les lettres dans leur orientation normale */
+        transform: rotate(180deg);
+        /* Inverser l'ordre pour que le texte soit lisible de haut en bas */
+    }
+
+    #allProject {
+        margin-top: 100px;
     }
 
 }
@@ -437,8 +474,8 @@ input[type="file"]:hover {
         height: 200px;
     }
 
-     //========Projects===========
-     .title-project {
+    //========Projects===========
+    .title-project {
         font-size: 8rem;
     }
 }

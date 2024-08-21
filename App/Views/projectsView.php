@@ -1,18 +1,18 @@
-<nav>
-    <ul id="miniNav">
-        <li class="subtitle mini-link">
-            <a href="../about">A Propos</a>
-        </li>
-        <li class="subtitle mini-link">
-            <a href="../projects">Projets</a>
-        </li>
-        <li class="subtitle mini-link">
-            <a href="../contact">Contact</a>
-        </li>
-    </ul>
-</nav>
 </header>
 <main data-scroll="area">
+    <nav id="navSide">
+        <ul id="miniNav">
+            <li class="subtitle mini-link">
+                <a href="../about"><p>A Propos</a></p>
+            </li>
+            <li class="subtitle mini-link">
+                <a href="../projects" class=""><p>Projets</a></p>
+            </li>
+            <li class="subtitle mini-link">
+                <a href="../contact"><p>Contact</a></p>
+            </li>
+        </ul>
+    </nav>
 
     <section class="scroll-container">
         <div class="content-section">
