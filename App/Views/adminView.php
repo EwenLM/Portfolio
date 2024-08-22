@@ -64,6 +64,9 @@
                             <label class="text" for="link">Lien</label>
                             <input class="text" type="text" id="link" name="link">
 
+                            <label class="text" for="techno">Techno Utilisées</label>
+                            <input class="text" type="text" id="techno" name="techno">
+
                             <label class="text" for="github">Github</label>
                             <input class="text" type="text" id="github" name="github">
 

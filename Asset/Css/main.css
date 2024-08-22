@@ -167,6 +167,10 @@ header {
   font-family: "pixel_operatorregular";
 }
 
+#backNav {
+  color: white;
+}
+
 #allProjects {
   display: flex;
   flex-direction: column;
@@ -382,7 +386,7 @@ input[type=file]:hover {
     margin-top: 0;
   }
   #nav {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   .li-menu {
     height: 100px;
@@ -393,12 +397,20 @@ input[type=file]:hover {
 }
 @media screen and (min-width: 1400px) {
   #nav {
-    font-size: 10rem;
+    font-size: 8rem;
   }
   .li-menu {
-    height: 200px;
+    height: 150px;
   }
   .title-project {
     font-size: 8rem;
   }
 }
+@media screen and (min-width: 1600px) {
+  #nav {
+    font-size: 10rem;
+  }
+  .li-menu {
+    height: 200px;
+  }
+}/*# sourceMappingURL=main.css.map */

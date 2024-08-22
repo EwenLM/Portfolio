@@ -9,6 +9,7 @@ class ProjectModel extends Model
     protected $description;
     protected $date;
     protected $link;
+    protected $techno;
     protected $github;
     protected $image;
     protected $video;
@@ -19,16 +20,18 @@ class ProjectModel extends Model
      * @param $title
      * @param $description
      * @param $date
+     * @param $techno
      * @param $link
      * @param $image
      * @param $video
      */
-    public function __construct($title = null, $description = null, $date = null, $link = null, $github = null, $image = null, $video = null)
+    public function __construct($title = null, $description = null, $date = null, $link = null,$techno = null, $github = null, $image = null, $video = null)
     {
         $this->title = $title;
         $this->description = $description;
         $this->date = $date;
         $this->link = $link;
+        $this->techno =$$techno;
         $this->github = $github;
         $this->image = $image;
         $this->video = $video;
@@ -38,6 +41,7 @@ class ProjectModel extends Model
             'description' => $description,
             'dateD' => $date,
             'link' => $link,
+            'techno' => $techno,
             'github' => $github,
             'image_path' => $image,
             'video_path' => $video

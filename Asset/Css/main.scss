@@ -207,12 +207,17 @@ header {
     font-size: 1.3rem;
 }
 
-#miniNav p:hover{
+#miniNav p:hover {
     border-left: solid 2px $lineColor;
 }
 
 .text {
     @include Text();
+}
+
+
+#backNav {
+    color: $textColor;
 }
 
 //===========Projets============
@@ -451,7 +456,7 @@ input[type="file"]:hover {
     }
 
     #nav {
-        font-size: 6rem;
+        font-size: 4rem;
     }
 
     .li-menu {
@@ -467,15 +472,26 @@ input[type="file"]:hover {
 
 @media screen and (min-width:1400px) {
     #nav {
+        font-size: 8rem;
+    }
+
+    .li-menu {
+        height: 150px;
+    }
+
+
+    //========Projects===========
+    .title-project {
+        font-size: 8rem;
+    }
+}
+
+@media screen and (min-width:1600px) {
+    #nav {
         font-size: 10rem;
     }
 
     .li-menu {
         height: 200px;
-    }
-
-    //========Projects===========
-    .title-project {
-        font-size: 8rem;
     }
 }

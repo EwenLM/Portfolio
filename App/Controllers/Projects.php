@@ -14,6 +14,7 @@ class Projects
             $descriptions = [];
             $date = [];
             $links = [];
+            $techno = [];
             $githubs = [];
             
             foreach ($projects as $project) {
@@ -21,6 +22,7 @@ class Projects
                 $descriptions[] = $project['description'];
                 $date[] = $project['dateD'];
                 $links[] = $project['link'];
+                $techno[]=$project['techno'];
                 $githubs[] = $project['github'];
             }
 
@@ -29,6 +31,7 @@ class Projects
                 'descriptions' => $descriptions,
                 'date' => $date,
                 'links' => $links,
+                'techno'=> $techno,
                 'githubs' => $githubs
             ];
         }
