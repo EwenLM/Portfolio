@@ -31,7 +31,7 @@ class ProjectModel extends Model
         $this->description = $description;
         $this->date = $date;
         $this->link = $link;
-        $this->techno =$$techno;
+        $this->techno =$techno;
         $this->github = $github;
         $this->image = $image;
         $this->video = $video;

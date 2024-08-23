@@ -21,8 +21,14 @@ $router ->get("/projects", "Projects@index");
 
 
 
+//===============Page Contact====================
+$router ->post('Contact','Contact@send');
+
 //=================Page Admin====================
 $router ->get('/admin','Admin@index');
+
+//Connexion admin
+$router ->post('/admin/login','Admin@login');
 
 //Gestion du cv
 $router ->get('/admin/cv/upload', 'Admin@uploadCv');
