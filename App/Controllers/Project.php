@@ -10,6 +10,7 @@ class Project
     public function index()
     {
         require RACINE . '/App/Views/head.php';
+        require RACINE . '/App/Views/navBack.php';
         require RACINE . '/App/Views/projectView.php';
         require RACINE . '/App/Views/foot.php';
     }

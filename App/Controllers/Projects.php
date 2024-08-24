@@ -38,6 +38,7 @@ class Projects
         
         
         require RACINE . '/App/Views/head.php';
+        require RACINE . '/App/Views/navBack.php';
         require RACINE . '/App/Views/projectsView.php';
         require RACINE . '/App/Views/foot.php';
     }

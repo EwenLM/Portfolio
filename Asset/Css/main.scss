@@ -85,10 +85,10 @@ ul li {
 
 #border {
     position: fixed;
-    top: 30px;
-    left: 30px;
-    right: 30px;
-    bottom: 30px;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
     border: 2px solid $lineColor;
     padding: 20px;
     box-sizing: border-box;
@@ -107,6 +107,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: solid 2px $lineColor;
+    padding-bottom: 30px;
 }
 
 #title {
@@ -148,6 +150,7 @@ header {
 }
 
 #nav {
+    font-family: $textFont;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,23 +195,10 @@ header {
     /* Le lien prend toute la largeur de son parent */
 }
 
-#miniNav {
-
-    justify-content: center;
-    padding-left: 0;
-    padding-bottom: 10px;
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-    border-bottom: solid 2px $lineColor;
-}
-
-#miniNav p {
-    font-size: 1.3rem;
-}
-
-#miniNav p:hover {
-    border-left: solid 2px $lineColor;
+#navback p {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 10px 0;
 }
 
 .text {
@@ -220,21 +210,31 @@ header {
     color: $textColor;
 }
 
+//===========About=============
+
+#aboutTitle {
+    margin-top : 20px;
+}
+
+#signature {
+    text-align: right;
+}
+
 //===========Projets============
 
 #allProjects {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     margin-top: 10px;
 }
 
 .project {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     max-width: 70%;
-    text-align: right;
+    text-align: center;
     margin-bottom: 15px;
 }
 
@@ -265,8 +265,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 60%;
+    width: 70%;
     margin-top: 10px;
+    background-color: #8345ED;
+    padding: 0 30px;
 }
 
 .all-link {
@@ -275,15 +277,25 @@ header {
 }
 
 .link-project {
-    display: flex;
+    margin-left: 5px ;
 }
 
 .img-link {
-    color: #45ED65;
     width: 30px;
     height: 30px;
 }
 
+.arrow-down {
+    position: absolute;
+    margin: 10px 0;
+    width: 0;
+    height: 0;
+    left: 48%;
+    border-right: 13px solid transparent;
+    border-left: 13px solid transparent;
+    
+    border-top: 15px solid $titleColor;
+}
 
 
 //==================Admin=================
@@ -396,7 +408,6 @@ input[type="file"]:hover {
     #bigTitle {
         padding-bottom: 10px;
         align-items: start;
-        border-bottom: solid 2px $lineColor;
     }
 
     .li-menu {
@@ -406,6 +417,8 @@ input[type="file"]:hover {
     }
 
     #nav {
+        font-size: 7rem;
+        ;
         justify-content: end;
     }
 
@@ -423,25 +436,32 @@ input[type="file"]:hover {
 
     //======Project=======
 
+    #allProjects {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 10px;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 70%;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
     #navSide {
         width: 10%;
     }
 
-    #miniNav {
-        border-bottom: none;
-        /* Alignement vertical des éléments */
-        align-items: flex-start;
-        /* Aligner les éléments à gauche */
-        writing-mode: vertical-rl;
-        /* Orientation verticale des lettres */
-
-        /* Garder les lettres dans leur orientation normale */
-        transform: rotate(180deg);
-        /* Inverser l'ordre pour que le texte soit lisible de haut en bas */
-    }
-
     #allProject {
         margin-top: 100px;
+    }
+
+    .arrow-down {
+        left: 70%;
     }
 
 }
@@ -461,7 +481,8 @@ input[type="file"]:hover {
     }
 
     #nav {
-        font-size: 4rem;
+        font-size: 7rem;
+        font-family: $textFont;
     }
 
     .li-menu {

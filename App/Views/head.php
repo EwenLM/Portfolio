@@ -16,7 +16,7 @@
 
         <div id="bigTitle">
         <a href="./home"><h1 id="title">Ewen Le Maux</h1></a>
-          <h2 class="subtitle">FullStack Developper</h2>
+          <h2 class="subtitle">FullStack Developer</h2>
         </div>
     
                 <!-- <div id="hrcontainer">

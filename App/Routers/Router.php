@@ -6,23 +6,24 @@ use Bramus\Router\Router;
 $router = new Router();
 $router->setNamespace('\App\Controllers');
 
-// Page d'accueil
+//=========Page d'accueil========
 
 $router->get("/home","Home@index");
 $router->get("/","Home@index");
 
 
-//Page A propos
+//==========Page A propos=========
 $router ->get("/about","About@index");
 
 
-//Page Projects
+//==============Page Projects=============
 $router ->get("/projects", "Projects@index");
 
 
 
 //===============Page Contact====================
-$router ->post('Contact','Contact@send');
+$router ->get('contact','Contact@index');
+$router ->post('contact/send','Contact@send');
 
 //=================Page Admin====================
 $router ->get('/admin','Admin@index');

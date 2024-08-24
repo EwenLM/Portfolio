@@ -1,13 +1,13 @@
 <nav id="nav">
     <ul id="menu-list">
         <a class="link li-menu" href="./about">
-            <li class="text ">About</li>
+            <li class="nav-title">About</li>
         </a>
         <a class="link li-menu" href="./projects">
-            <li class="text">Projects</li>
+            <li class="nav-title">Projects</li>
         </a>
         <a class="link li-menu" href="./contact">
-            <li class="text">Contact</li>
+            <li class="nav-title">Contact</li>
         </a>
     </ul>
 </nav>

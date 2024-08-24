@@ -1,10 +1,5 @@
 </header>
 <main data-scroll="area">
-    <nav id="navSide">
-        <a href="../home">
-            <p id="backNav"></p>
-        </a>
-    </nav>
 
     <section class="scroll-container">
         <div class="content-section">
@@ -22,13 +17,10 @@
                                 </p>
                                 <div class="all-link">
                                     <div class="link-project">
-                                        <a href="<?= $dataProjects['links'][$index]; ?> "> <img class="img-link" src="./Asset/Images/site.svg" alt="logo site"></a>
-                                        <
-                                            <!-- <p class="text">" target="_blank">Site/p> -->
+                                        <a href="<?= $dataProjects['links'][$index]; ?> " target="_blank"> <img class="img-link" src="./Asset/Images/site.png" alt="logo site"></a>  
                                     </div>
                                     <div class="link-project">
-                                        <a href="<?= $dataProjects['githubs'][$index]; ?>"> <img class="img-link" src="./Asset/Images/github.svg" alt=""></a>
-                                        <!-- <p class="text">" target="_blank">GitHub</p> -->
+                                        <a href="<?= $dataProjects['githubs'][$index]; ?>" target="_blank"> <img class="img-link" src="./Asset/Images/github.png" alt=""></a>
                                     </div>
                                 </div>
                             </div>
