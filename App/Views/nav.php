@@ -1,3 +1,4 @@
+<section id="hoem">
 <nav id="nav">
     <ul id="menu-list">
         <a class="link li-menu" href="./about">

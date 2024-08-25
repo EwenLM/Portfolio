@@ -121,22 +121,6 @@ header {
     margin: 0;
 }
 
-
-#hr1 {
-    display: flex;
-    align-self: start;
-}
-
-#hr2 {
-    display: flex;
-    align-self: center;
-}
-
-#hr3 {
-    display: flex;
-    align-self: end;
-}
-
 .scroll-container {
     flex-grow: 1; //rempli tout l'espace disponible
     height: 100%;
@@ -205,15 +189,21 @@ header {
     @include Text();
 }
 
+#game {
+    display: none;
+}
+
 
 #backNav {
     color: $textColor;
 }
 
+
+
 //===========About=============
 
 #aboutTitle {
-    margin-top : 20px;
+    margin-top: 20px;
 }
 
 #signature {
@@ -221,6 +211,17 @@ header {
 }
 
 //===========Projets============
+
+#presentProject {
+
+    padding: 3px;
+    border-bottom: solid 2px $lineColor ;
+}
+
+
+#presentProject p {
+    font-size: 1.5rem;
+}
 
 #allProjects {
     display: flex;
@@ -250,11 +251,11 @@ header {
 
 
 .title-project:hover {
-    border-bottom: 1.5mm ridge $lineColor;
+    border-bottom: 1.5mm solid $lineColor;
 }
 
 .title-project.active {
-    border-bottom: 1.5mm ridge $lineColor;
+    border-bottom: 1.5mm solid $lineColor;
 }
 
 .project-detail {
@@ -277,7 +278,7 @@ header {
 }
 
 .link-project {
-    margin-left: 5px ;
+    margin-left: 5px;
 }
 
 .img-link {
@@ -293,7 +294,7 @@ header {
     left: 48%;
     border-right: 13px solid transparent;
     border-left: 13px solid transparent;
-    
+
     border-top: 15px solid $titleColor;
 }
 
@@ -329,6 +330,31 @@ form button:hover {
     color: black;
     border: none;
 }
+
+.centered-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%; /* Le formulaire occupe 70% de la largeur de la page */
+    margin: 0 auto; /* Centre horizontalement le formulaire */
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.form-group label,
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Assure que tous les éléments prennent toute la largeur disponible */
+    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur */
+}
+
 
 label.text {
     @include Text();
@@ -436,11 +462,30 @@ input[type="file"]:hover {
 
     //======Project=======
 
+    .content-section {
+        display: flex;
+
+    }
+
+    #presentProject {
+        border-bottom: none;
+        margin-top: 160px;
+        text-align: start;
+        width: 55%;
+        margin-left: 10px;
+        margin-right: 50px;
+    }
+
+    #presentProject p {
+        width: 80%;
+    }
+
     #allProjects {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         margin-top: 10px;
+        max-width: 45%;
     }
 
     .project {
@@ -448,20 +493,16 @@ input[type="file"]:hover {
         flex-direction: column;
         align-items: flex-end;
         max-width: 70%;
-        text-align: left;
+        text-align: end;
         margin-bottom: 15px;
+    }
+
+    .project h3{
+        text-wrap: nowrap;
     }
 
     #navSide {
         width: 10%;
-    }
-
-    #allProject {
-        margin-top: 100px;
-    }
-
-    .arrow-down {
-        left: 70%;
     }
 
 }
@@ -489,11 +530,21 @@ input[type="file"]:hover {
         height: 100px;
     }
 
+    #game {
+        display: flex;
+        box-shadow: 5px 5px 5px 5px;
+        border: none;
+        position: absolute;
+        top: 220px;
+        left: 150px;
+        height: 300px;
+        width: 300px;
+    }
+
     //========Projects===========
     .title-project {
         font-size: 6rem;
     }
-
 }
 
 @media screen and (min-width:1400px) {
@@ -505,6 +556,11 @@ input[type="file"]:hover {
         height: 150px;
     }
 
+
+    #game{
+        height: 600px;
+        width: 600px;
+    }
 
     //========Projects===========
     .title-project {
