@@ -11,8 +11,10 @@ $router->setNamespace('\App\Controllers');
 $router->get("/home","Home@index");
 $router->get("/","Home@index");
 
+//============page Invaders
+$router->get ("/play-invaders", "Invaders@index");
 
-//==========Page A propos=========
+//==========Page About=========
 $router ->get("/about","About@index");
 
 

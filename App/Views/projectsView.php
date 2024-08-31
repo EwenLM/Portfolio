@@ -19,7 +19,7 @@
                             <div class="project-detail">
                                 <p class="text">
                                     <?php echo ($dataProjects['descriptions'][$index]); ?>
-                                </p> <br> <br>
+                                </p> <br>
                                 <p class="text">
                                     Technologies used : <?php echo ($dataProjects['techno'][$index]) ?>
                                 </p>

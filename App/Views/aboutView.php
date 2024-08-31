@@ -1,6 +1,7 @@
 </header>
 <main>
-    <section>
+<section class="scroll-container">
+<div class="content-section">
     <h2 id="aboutTitle" class="subtitle">Hi, Welcome to my world</h2>
     <p id="aboutText" class="text">
         I'm a new passionate developer with a huge wish to learn everyday about this new world. <br><br>
@@ -14,5 +15,6 @@
     <p id="signature" class="text">
         Ewen
     </p></a>
+    </div>
     </section>
 </main>

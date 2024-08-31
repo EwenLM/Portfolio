@@ -35,6 +35,10 @@ ul li {
   list-style-type: none;
 }
 
+p {
+  font-size: 1.5rem;
+}
+
 #border {
   position: fixed;
   top: 20px;
@@ -117,7 +121,12 @@ header {
 }
 
 .li-menu:hover {
+  color: #DE45ED;
   border-bottom: 1.5mm ridge #8345ED;
+}
+
+#linkInvader {
+  display: none;
 }
 
 .link {
@@ -213,6 +222,11 @@ header {
   margin-top: 10px;
   background-color: #8345ED;
   padding: 0 30px;
+}
+
+.project-detail.active p {
+  font-size: 1.5rem;
+  margin-top: none;
 }
 
 .all-link {
@@ -376,21 +390,15 @@ input[type=file]:hover {
     padding-bottom: 10px;
     align-items: start;
   }
-  .li-menu {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-  }
-  #nav {
-    font-size: 7rem;
-    justify-content: end;
-  }
   #menu-list {
     margin-top: 50px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: end;
+  }
+  #linkInvader {
+    display: block;
   }
   .text {
     font-size: 1.2rem;
@@ -420,7 +428,7 @@ input[type=file]:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    max-width: 70%;
+    max-width: 100%;
     text-align: end;
     margin-bottom: 15px;
   }
@@ -441,21 +449,17 @@ input[type=file]:hover {
     margin-top: 0;
   }
   #nav {
-    font-size: 7rem;
+    font-size: 6rem;
     font-family: "pixel_operatorregular";
   }
   .li-menu {
-    height: 100px;
+    height: 80px;
   }
   #game {
     display: flex;
+    align-self: center;
     box-shadow: 5px 5px 5px 5px;
     border: none;
-    position: absolute;
-    top: 220px;
-    left: 150px;
-    height: 300px;
-    width: 300px;
   }
   .title-project {
     font-size: 6rem;
@@ -463,10 +467,10 @@ input[type=file]:hover {
 }
 @media screen and (min-width: 1400px) {
   #nav {
-    font-size: 8rem;
+    font-size: 6rem;
   }
   .li-menu {
-    height: 150px;
+    height: 100px;
   }
   #game {
     height: 600px;
@@ -481,6 +485,6 @@ input[type=file]:hover {
     font-size: 10rem;
   }
   .li-menu {
-    height: 200px;
+    height: 170px;
   }
 }
